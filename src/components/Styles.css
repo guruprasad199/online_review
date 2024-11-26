@@ -1,0 +1,45 @@
+.button__bar {
+    position: absolute;
+    bottom: -30px;
+  }
+  
+  .button__bar ul {
+    display: flex;
+    justify-content: flex-start; /* Align dots to the start */
+    padding: 0;
+    list-style: none;
+  }
+  
+  .button__bar li {
+    margin-right: 5px; /* Adjust the space between the dots */
+    transition: transform 0.4s ease, width 0.4s ease; /* Smooth transition for width and scale */
+  }
+  
+  .button__bar li button {
+    background-color: #0f558129; /* Background color for inactive dots */
+    border: none;
+    width: 8px; /* Adjust to desired size */
+    height: 8px; /* Equal width and height for perfect circle */
+    border-radius: 50%; /* Circle shape */
+    transition: all 0.4s ease; /* Smooth transition */
+  }
+  
+  .button__bar li.slick-active button {
+    background-color: #005287; /* Background color for active dot */
+    width: 20px; /* Adjust size for active dot */
+    height: 8px; /* Height remains same for pill effect */
+    border-radius: 20px; /* Pill shape for active dot */
+    transform: scale(1.2); /* Add scale for a growing effect */
+    transition: transform 0.4s ease, width 0.4s ease; /* Smooth transition for active state */
+  }
+  
+  .button__bar li button::before {
+    color: #0f5581;
+    opacity: 0.5; /* Default dot style */
+    transition: all 0.4s ease; /* Add transition to the dot style */
+  }
+  
+  .button__bar li.slick-active button::before {
+    color: #005287; /* Active dot color */
+  }
+  
